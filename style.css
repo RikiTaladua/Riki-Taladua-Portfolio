@@ -75,6 +75,10 @@
   p {
     width: 300px;
   }
+  #riki {
+    color: white;
+    text-decoration: none;
+  }
   
   /* Specific styles for each section */
   #home {
@@ -142,6 +146,14 @@
  #resume-tag {
     text-align: center;
     letter-spacing: 3px;
+ }
+ #project-tag {
+  text-align: center;
+  letter-spacing: 3px;
+ }
+ #projects {
+  text-align: center;
+
  }
  
  

@@ -25,9 +25,7 @@ function cycle(nextToPrevious) {
 }
 
 const prev = document.querySelector(".prev");
-prev.addEventListener("click", () => {
-    console.log("click");
-    cycle(-1)});
+prev.addEventListener("click", () => {cycle(-1)});
 
 const next = document.querySelector(".next");
 next.addEventListener("click", () => cycle(1));
