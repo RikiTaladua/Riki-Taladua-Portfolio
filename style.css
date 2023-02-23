@@ -69,8 +69,8 @@
     text-align: center;
     width: 300px;
   }
-#github {
-    margin-right: 150px;
+#email {
+  margin-right: 75px;
 }
   p {
     width: 300px;
@@ -92,6 +92,7 @@
     max-width: 100%;
     align-items: center;
     display: inline-block;
+    border-radius: 15px;
     /* height: auto; */
   }
   
@@ -129,7 +130,7 @@
     border-radius: 0px;
     display: none;
   }
-  .carousel-images img:first-of-type{
+  .carousel-images img:first-of-type {
     display: block;
   }
   .prev, .next {
@@ -153,7 +154,13 @@
  }
  #projects {
   text-align: center;
-
+  display: block;
+ }
+ #hangman {
+  margin-top: 20px;
+ }
+ #spaceBattle {
+  margin-top: 20px;
  }
  
  

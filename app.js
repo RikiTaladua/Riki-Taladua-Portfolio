@@ -10,7 +10,7 @@ navLinks.forEach(link => {
 let currentImgIndex = 0;
 let previousImgIndex = 0;
 
-const images = document.querySelectorAll("img");
+const images = document.getElementsByClassName("me-img");
 console.log(images);
 function cycle(nextToPrevious) {
     previousImgIndex = currentImgIndex
