@@ -1,4 +1,3 @@
-// Add active class to navigation links on click
 const navLinks = document.querySelectorAll('nav a');
 
 navLinks.forEach(link => {
@@ -8,59 +7,27 @@ navLinks.forEach(link => {
   });
 });
 
-// Toggle mobile navigation menu
-const menuButton = document.querySelector('.menu-button');
-const navMenu = document.querySelector('nav ul');
+let currentImgIndex = 0;
+let previousImgIndex = 0;
 
-menuButton.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
-});
-
-// Change image on hover
-const projectImages = document.querySelectorAll('.project img');
-
-projectImages.forEach(image => {
-  image.addEventListener('mouseenter', () => {
-    const src = image.getAttribute('src');
-    image.setAttribute('src', `${src.slice(0, -4)}-hover.jpg`);
-  });
-
-  image.addEventListener('mouseleave', () => {
-    const src = image.getAttribute('src');
-    image.setAttribute('src', `${src.slice(0, -10)}.jpg`);
-  });
-});
-const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide img');
-const prevBtn = document.querySelector('.carousel-prev');
-const nextBtn = document.querySelector('.carousel-next');
-
-let counter = 0;
-const size = carouselImages[0].clientWidth;
-
-function slideNext() {
-  if (counter >= carouselImages.length - 1) return;
-  counter++;
-  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-  updateActive();
-}
-
-function slidePrev() {
-  if (counter <= 0) return;
-  counter--;
-  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-  updateActive();
-}
-
-function updateActive() {
-  carouselImages.forEach((image, index) => {
-    if (index === counter) {
-      image.parentElement.classList.add('active');
-    } else {
-      image.parentElement.classList.remove('active');
+const images = document.querySelectorAll("img");
+console.log(images);
+function cycle(nextToPrevious) {
+    previousImgIndex = currentImgIndex
+    currentImgIndex = currentImgIndex + nextToPrevious
+    images[previousImgIndex].style.display = "none";
+    if (currentImgIndex >= images.length) {
+        currentImgIndex = 0;
+    } else if (currentImgIndex < 0) {
+        currentImgIndex = images.length + nextToPrevious;
     }
-  });
+    images[currentImgIndex].style.display = "block";
 }
 
-nextBtn.addEventListener('click', slideNext);
-prevBtn.addEventListener('click', slidePrev);
+const prev = document.querySelector(".prev");
+prev.addEventListener("click", () => {
+    console.log("click");
+    cycle(-1)});
+
+const next = document.querySelector(".next");
+next.addEventListener("click", () => cycle(1));

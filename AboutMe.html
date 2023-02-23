@@ -4,50 +4,52 @@
     <meta charset="UTF-8">
     <title>My Portfolio - Home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Riki</h1>
+        <a href="HomePage.html">
+            <h1>Riki</h1>
+        </a>
       <nav>
         <ul>
           <li><a href="HomePage.html">Home</a></li>
           <li><a href="AboutMe.html">About Me</a></li>
           <li><a href="Resume.html">Resume</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="links.html">Contact Me</a></li>
         </ul>
       </nav>
     </header>
     
     <main>
       <section id="about">
-        <h2>Welcome to My Portfolio!</h2>
+       
         <p>This is my personal website where you can learn more about me and my work. Please feel free to look around and contact me if you have any questions!</p>
-        <div class="carousel-container">
-        <div class="carousel-slide">
-          <img src="image1.jpg">
-          <p>Image 1 Description</p>
-        </div>
-        <div class="carousel-slide">
-          <img src="image2.jpg">
-          <p>Image 2 Description</p>
-        </div>
-        <div class="carousel-slide">
-          <img src="image3.jpg">
-          <p>Image 3 Description</p>
-        </div>
-      </div>
-      
-      <button class="carousel-prev">Previous</button>
-      <button class="carousel-next">Next</button>
-      
-    
+        <div class="container">  
+            <div class="prev">
+              <span class="lnr lnr-chevron-left"></span>
+            </div>
+            <div class="carousel-images">
+              <img src="IMG_3577.jpg" height="100%" width="100%">
+              <img src="IMG_6606.jpg" height="100%" width="100%">
+              <img src="407E52F4-C04C-4FE8-BBB3-4CEEFF266D6F.jpg">
+              <img src="IMG_9436.jpg">
+              <img src="IMG_5415.jpg">
+              <img src="IMG_3763.jpg">
+            </div>
+            <div class="next">
+              <span class="lnr lnr-chevron-right"></span>
+            </div>
+          </div>  
     </section>
     </main>
     <footer>
-      <p>Shrek is love, Shrek is life.</p>
+        <a href="https://www.linkedin.com/" id="linkedIn" target="_blank">
+            <img src="output-onlinegiftools.gif" width="10%" height="10%">
+          </a>
+          <a href="https://github.com/RikiTaladua" id="github" target="_blank">
+            <img src="github.gif" width="10%" height="10%"
+          </a>
     </footer>
-    
-    <script src="script.js"></script>
   </body>
 </html>
