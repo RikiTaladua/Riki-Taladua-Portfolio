@@ -1,12 +1,3 @@
-const navLinks = document.querySelectorAll('nav a');
-
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.forEach(link => link.classList.remove('active'));
-    link.classList.add('active');
-  });
-});
-
 let currentImgIndex = 0;
 let previousImgIndex = 0;
 
@@ -24,8 +15,22 @@ function cycle(nextToPrevious) {
     images[currentImgIndex].style.display = "block";
 }
 
-const prev = document.querySelector(".prev");
+const prev = document.querySelector("#prev");
 prev.addEventListener("click", () => {cycle(-1)});
 
-const next = document.querySelector(".next");
+const next = document.querySelector("#next");
 next.addEventListener("click", () => cycle(1));
+
+
+
+const hover = (id) => {
+    console.log(id)
+    const element = document.getElementById (id)
+    element.style.backgroundColor="#005b96"
+}
+
+const leave = (id) => {
+    console.log(id)
+    const element = document.getElementById (id)
+    element.style.backgroundColor="white"
+}

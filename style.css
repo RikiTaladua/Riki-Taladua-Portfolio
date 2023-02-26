@@ -57,7 +57,7 @@
   
   section p {
     font-size: 1.2rem;
-    line-height: 1.5;
+    line-height: 2rem;
   }
   
   footer {
@@ -85,25 +85,54 @@
     text-align: center;
     display: block;
   }
+  #intro {
+    position:relative;
+    font-size: 70px;
+    top: -450px;
+    text-align: left;
+    right: 50px;
+    animation: grow 2s ease-in-out;
+  }
+  #homepage-picture {
+    height: 650px;
+    width: 800px;
+    margin-left: 450px;
+  }
+  #home1 {
+    color: #005b96;
+    font-weight: bold;
+    animation: grow 4s ease-in-out;
+    position: relative;
+    top: -390px;
+    letter-spacing: 1px;
+  }
+  
+  #home2 {
+    color: black;
+    animation: grow 5s ease-in-out;
+    position: relative;
+    top: -350px;
+    letter-spacing: 1px;
+  }
+  
+  #home3 {
+    color: black;
+    animation: left-slide 6s ease-in-out;
+    position: relative;
+    top: -320px;
+    letter-spacing: 1px;
+  }
   img {
-    /* width: fit-content;
-    height: 550px;
-    display: block; */
     max-width: 100%;
-    align-items: center;
-    display: inline-block;
     border-radius: 15px;
-    /* height: auto; */
   }
   
   #about {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
   }
   .container {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     width: 60vw;
     height: 100%;
@@ -133,12 +162,10 @@
   .carousel-images img:first-of-type {
     display: block;
   }
-  .prev, .next {
+  #prev, #next {
     align-self: auto;
-    background: #fffef9;
-    color: grey;
-    padding: 10px;
-    border-radius: 50%;
+    padding: 15px;
+    border-radius: 10%;
     text-align: center;
   }
   #resume {
@@ -151,6 +178,7 @@
  #project-tag {
   text-align: center;
   letter-spacing: 3px;
+  animation: fade-in 10s;
  }
  #projects {
   text-align: center;
@@ -158,47 +186,57 @@
  }
  #hangman {
   margin-top: 20px;
+  display: inline-block;
+  animation: left-slide 2s;
  }
  #spaceBattle {
   margin-top: 20px;
+  display: inline-block;
+  animation: right-slide 2s;
  }
  
  
 
   
   /* Responsive styles */
-  @media (max-width: 900px) {
-    header {
-      flex-direction: column;
-      text-align: center;
+  @media (max-width: 900px) and (min-width: 600px) {
+  }   
+
+  @keyframes grow {
+    from {
+      transform: scale(0);
+      opacity: 0;
     }
-  
-    nav {
-      margin-top: 1rem;
+    to {
+      transform: scale(1);
+      opacity: 1;
     }
-  
-    nav ul {
-      flex-direction: column;
+  }
+  @keyframes left-slide {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
     }
-  
-    nav ul li {
-      margin-right: 0;
-      margin-bottom: 0.5rem;
+    to {
+      transform: translateY(0);
+      opacity: 2;
     }
-  
-    #about {
-      flex-direction: column;
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: black;
+  }
+  @keyframes right-slide {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
     }
-  
-    #resume {
-      overflow-x: auto;
+    to {
+      transform: translateX(0);
+      opacity: 2;
     }
-  
-    #projects .project {
-      flex-basis: 100%;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
     }
-};
+    to {
+      opacity: 10;
+    }
+  }
