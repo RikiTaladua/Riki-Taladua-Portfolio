@@ -204,9 +204,7 @@
       position: relative;
       margin: auto;
     }
-    #carousel-images {
-      /* margin-top: -400px;
-      margin-right: 100px; */
+    #carousel-images { 
       scale: 100%;
       display: flex;
       order: -1;
