@@ -26,7 +26,6 @@ img2.addEventListener("click", function() {
     } else {
         big2 = false
         img2.style.width = "50%";
-        img2.style.height = "50%";
-        console.log("uyfxdgghj")  
+        img2.style.height = "50%"; 
     }
 }); 
