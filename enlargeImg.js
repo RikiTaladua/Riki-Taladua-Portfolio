@@ -13,8 +13,7 @@ img1.addEventListener("click", function() {
     } else {
         big1 = false
         img1.style.width = "50%";
-        img1.style.height = "50%";
-        console.log("uyfxdgghj")  
+        img1.style.height = "50%"; 
     }
 }); 
 const img2 = document.getElementById("resume-img2")
