@@ -1,6 +1,9 @@
 let currentImgIndex = 0;
 let previousImgIndex = 0;
 
+
+
+// carousel 
 const images = document.getElementsByClassName("me-img");
 console.log(images);
 function cycle(nextToPrevious) {
@@ -14,7 +17,7 @@ function cycle(nextToPrevious) {
     }
     images[currentImgIndex].style.display = "block";
 }
-
+// carousel buttons
 const prev = document.querySelector("#prev");
 prev.addEventListener("click", () => {cycle(-1)});
 
@@ -22,7 +25,7 @@ const next = document.querySelector("#next");
 next.addEventListener("click", () => cycle(1));
 
 
-
+// hover change color on hover (buttons)
 const hover = (id) => {
     const element = document.getElementById (id)
     element.style.backgroundColor="#005b96"

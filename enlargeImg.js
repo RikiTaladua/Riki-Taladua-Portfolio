@@ -3,7 +3,7 @@ let big2 = false;
 
 
 
-
+// resume enlarge image on click
 const img1 = document.getElementById("resume-img1")
 img1.addEventListener("click", function() {
     if (big1 === false) {
