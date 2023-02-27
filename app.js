@@ -9,8 +9,7 @@ console.log(images);
 function cycle(nextToPrevious) {
     previousImgIndex = currentImgIndex
     currentImgIndex = currentImgIndex + nextToPrevious
-    images[previousImgIndex].style.display = "none"; {    
-    }
+    images[previousImgIndex].style.display = "none"; 
     if (currentImgIndex >= images.length) {
         currentImgIndex = 0;
     } else if (currentImgIndex < 0) {
