@@ -24,13 +24,11 @@ next.addEventListener("click", () => cycle(1));
 
 
 const hover = (id) => {
-    console.log(id)
     const element = document.getElementById (id)
     element.style.backgroundColor="#005b96"
 }
 
 const leave = (id) => {
-    console.log(id)
     const element = document.getElementById (id)
     element.style.backgroundColor="white"
 }

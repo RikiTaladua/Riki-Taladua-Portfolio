@@ -98,6 +98,29 @@
     width: 750px;
     margin-left: 450px;
   }
+  @media (min-width: 768px) and (max-width: 1000px) {
+    #homepage-picture {
+      position: relative;
+      margin: auto;
+    }
+    #intro {
+      margin-top: 450px;
+      margin-left: 300px;
+      scale: 100%;
+    }
+    #home1 {
+      margin-left: 300px;
+      scale: 200%;
+    }
+    #home2 {
+      margin-left: 300px;
+      scale: 200%;
+    }
+    #home3 {
+      margin-left: 300px;
+      scale: 200%;
+    }
+  }
   #home1 {
     color: #005b96;
     font-weight: bold;
@@ -151,7 +174,7 @@
     justify-content: space-around;
   }
   
-  .carousel-images {
+  #carousel-images {
     width: 1000px;
     height: 500px;
     background: none;
@@ -162,12 +185,12 @@
     display: flex;
     border-radius: 15px;
   }
-  .carousel-images img {
+  #carousel-images img {
     width: auto;
     border-radius: 0px;
     display: none;
   }
-  .carousel-images img:first-of-type {
+  #carousel-images img:first-of-type {
     display: block;
   }
   #prev, #next {
@@ -176,6 +199,74 @@
     border-radius: 10%;
     text-align: center;
   }
+  @media (min-width: 768px) and (max-width: 1000px) {
+    .carousel-container {
+      position: relative;
+      margin: auto;
+    }
+    #carousel-images {
+      /* margin-top: -400px;
+      margin-right: 100px; */
+      scale: 100%;
+      display: flex;
+      order: -1;
+    }
+    .container {
+      position: relative;
+      margin-top: 50px;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .me-img {
+      position: relative;
+      margin: auto;
+    }
+    #aboutme-text {
+     margin: 100px auto 0px;
+     font-size: 10px;
+     text-align: center;
+     display: flex;
+    order: 1;
+    align-self: center;
+    margin-left: 350px;
+    scale: 250%;
+    margin-top: 200px;
+  }
+  #prev {
+    /* margin-top: 100px; */
+    background-color: black;
+    margin-right: 110px;
+    display: block;
+    justify-content: center;
+    padding: 1px;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    border-radius: none;
+    margin: 0;
+    margin-top: 20px;
+  }
+  #next {
+    /* margin-top: 100px; */
+    background-color: black;
+    margin-left: 110px;
+   display: block;
+   justify-content: center;
+   padding: 1px;
+   width: 50px;
+   height: 50px;
+   border-radius: none;
+   margin: 0px;
+   margin-top: 20px;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+  #carousel-images img:first-of-type {
+    display: flex;
+  }
+}
   #resume {
     text-align: center;
   }
@@ -206,10 +297,6 @@
  
 
   
-  /* Responsive styles */
-  @media (max-width: 900px) and (min-width: 600px) {
-  }   
-
   @keyframes grow {
     from {
       transform: scale(0);
